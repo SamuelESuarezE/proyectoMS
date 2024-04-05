@@ -8,3 +8,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+
+body{
+    width:100vw;
+    background-color: var(--color-white);
+}
