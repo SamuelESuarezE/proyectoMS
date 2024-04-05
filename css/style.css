@@ -6,10 +6,127 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 body{
     width:100vw;
     background-color: var(--color-white);
 }
+
+/* Oferta superior */
+
+.offer {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    background-color: var(--color-black);
+    font-size: 30px;
+    color: var(--color-white);
+}
+
+.offer :first-child {
+    cursor: pointer;
+}
+
+.offer p {
+    margin: auto;
+    font-size: 14px;
+
+}
+
+/* Header Logo, Search Bar & Icons */
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+header .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+}
+header .title img {
+    height: 28px;
+    margin-left: 80px;
+}
+
+header .title .searchIcons {
+    display: flex;
+    width: 650px;
+}
+
+header .title .searchIcons .search {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border: 2px solid var(--color-lightgray);
+    height: 40px;
+    padding-inline: 15px;
+    width: 60%;
+    font-size: 22px;
+}
+
+header .title .searchIcons .search:hover {
+    border: 2px solid #b3b3b3;
+}
+
+header .title .searchIcons .icons {
+    display: flex;
+    font-size: 30px;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+header .title .searchIcons .icons i {
+    cursor: pointer;
+}
+
+header .title .searchIcons input {
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+/* Header Navegator */
+
+header nav {
+    height: 55px;
+    padding-inline: 30px;
+}
+
+header nav ul {
+    height: 100%;
+    align-items: center;
+    font-size: 14px;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    height: 20px;
+    border-bottom: 2px solid transparent;
+}
+
+header nav ul li:hover {
+    border-bottom: 2px solid var(--color-pink);
+    cursor: pointer;
+}
+
+header nav ul li:first-child {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding-inline: 8px;
+    height: 25px;
+
+}
+
+header nav ul li:last-child {
+    color: var(--color-red);
+}
+
