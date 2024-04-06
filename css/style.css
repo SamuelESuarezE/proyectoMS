@@ -8,7 +8,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 body{
+
     width:100vw;
     background-color: var(--color-white);
 }
@@ -128,5 +130,99 @@ header nav ul li:first-child {
 
 header nav ul li:last-child {
     color: var(--color-red);
+
+}
+
+/* Promocion - caja de progreso */
+
+.description__promotion{
+
+    display: flex;
+    height: 5vh;
+    width: 100vw;
+    background-color: var(--color-pink);
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+
+}
+
+.descriptionText p a{
+    font-weight: bold;
+}
+
+.prices__component{
+
+    display: flex;
+    width: 30% ;
+}
+
+.progress__Box{
+
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress{
+
+    height: 1.5vh;
+    background-color: white;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.prices__component p{
+
+    width: 20%;
+
+}
+
+/* Minibanner */
+
+.minibanner img{
+
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    
+}
+
+/* Carrusel automatico */
+
+.slider__box{
+    width:  1200px;
+    height: auto;
+    overflow: hidden;
+    margin:auto;
+    
+}
+
+.slider__box ul{
+    display: flex;
+    padding: 0;
+    width: 200%;
+
+    animation: slide 6s infinite alternate ease-in-out
+}
+
+.slider__box li{
+
+    list-style: none;
+    width: 100%;
+
+}
+
+.slider__box img{
+    width: 100%;
+}
+
+@keyframes slide {
+    49% {margin-left: 0;}
+    50% {margin-left: 0;}
+
+    60% {margin-left: -100%;}
+    100% {margin-left: -100%;}
 }
 
