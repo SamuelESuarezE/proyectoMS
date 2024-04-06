@@ -15,96 +15,54 @@ body{
     background-color: var(--color-white);
 }
 
-/* Promocion - caja de progreso */
+/* Ver terminos y condiciones */
 
-.description__promotion{
-
+.politica{
     display: flex;
-    height: 5vh;
-    width: 100vw;
-    background-color: var(--color-pink);
     justify-content: center;
-    gap: 10%;
-    align-items: center;
+    height: 50px;
 
 }
 
-.descriptionText p a{
+.politica a{
+
+    color: var(--color-black);
     font-weight: bold;
-}
-
-.prices__component{
-
-    display: flex;
-    width: 30% ;
-}
-
-.progress__Box{
-
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.progress{
-
-    height: 1.5vh;
-    background-color: white;
-    width: 95%;
-    border-radius: 10px;
-}
-
-.prices__component p{
-
-    width: 20%;
+    text-decoration-line: underline;
 
 }
 
-/* Minibanner */
+/* Galería de tipos de joyas */
 
-.minibanner img{
+.jewerly__types{
 
+    display: grid;
+    grid-template: 1fr / repeat(6, 1fr);
     width: 1200px;
-    display: flex;
-    margin: auto;
-    
-}
-
-/* Carrusel automatico */
-
-.slider__box{
-    width:  1200px;
-    height: auto;
-    overflow: hidden;
     margin:auto;
-    
+    gap: 20px
+
 }
 
-.slider__box ul{
-    display: flex;
-    padding: 0;
-    width: 200%;
+.jewerly__types img{
 
-    animation: slide 6s infinite alternate ease-in-out
-}
-
-.slider__box li{
-
-    list-style: none;
     width: 100%;
-
+    transition: transform 0.6s ease-in-out;
+    cursor: pointer
 }
 
-.slider__box img{
-    width: 100%;
+.jewerly img:hover{
+    transform: scale(1.07);
 }
 
-@keyframes slide {
-    49% {margin-left: 0;}
-    50% {margin-left: 0;}
 
-    60% {margin-left: -100%;}
-    100% {margin-left: -100%;}
+.jewerly{
+
+    text-align: center;
 }
 
+.jewerly__types .jewerly a{
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-pink);
+    color: var(--color-black);
+}
