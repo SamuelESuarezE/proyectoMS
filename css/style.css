@@ -1,0 +1,372 @@
+@import url(variables.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+body{
+
+    width:100%;
+    overflow-x: hidden;
+    background-color: var(--color-white);
+}
+
+/* Oferta superior */
+
+.offer {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    background-color: var(--color-black);
+    font-size: 30px;
+    color: var(--color-white);
+}
+
+.offer :first-child {
+    cursor: pointer;
+}
+
+.offer p {
+    margin: auto;
+    font-size: 14px;
+
+}
+
+/* Header Logo, Search Bar & Icons */
+
+header {
+    z-index: 5;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-white);
+}
+
+header .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+}
+header .title img {
+    height: 28px;
+    margin-left: 80px;
+}
+
+header .title .searchIcons {
+    display: flex;
+    width: 650px;
+}
+
+header .title .searchIcons .search {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border: 2px solid var(--color-lightgray);
+    height: 40px;
+    padding-inline: 15px;
+    width: 60%;
+    font-size: 22px;
+}
+
+header .title .searchIcons .search:hover {
+    border: 2px solid #b3b3b3;
+}
+
+header .title .searchIcons .icons {
+    display: flex;
+    font-size: 30px;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+header .title .searchIcons .icons i {
+    cursor: pointer;
+}
+
+header .title .searchIcons input {
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+/* Header Navegator */
+
+header nav {
+    height: 55px;
+    padding-inline: 30px;
+}
+
+header nav ul {
+    height: 100%;
+    align-items: center;
+    font-size: 14px;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    height: 20px;
+    border-bottom: 2px solid transparent;
+}
+
+header nav ul li:hover {
+    border-bottom: 2px solid var(--color-pink);
+    cursor: pointer;
+}
+
+header nav ul li:first-child {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding-inline: 8px;
+    height: 25px;
+
+}
+
+header nav ul li:last-child {
+    color: var(--color-red);
+
+}
+
+/* Promocion - caja de progreso */
+
+.description__promotion{
+
+    display: flex;
+    height: 5vh;
+    width: 100vw;
+    background-color: var(--color-pink);
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+
+}
+
+.descriptionText p a{
+    font-weight: bold;
+}
+
+.prices__component{
+
+    display: flex;
+    width: 30% ;
+}
+
+.progress__Box{
+
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress{
+
+    height: 1.5vh;
+    background-color: white;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.prices__component p{
+
+    width: 20%;
+
+}
+
+/* Minibanner */
+
+.minibanner img{
+
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    
+}
+
+/* Carrusel automatico */
+
+.slider__box{
+    width:  1200px;
+    height: auto;
+    overflow: hidden;
+    margin:auto;
+    
+}
+
+.slider__box ul{
+    display: flex;
+    padding: 0;
+    width: 200%;
+
+    animation: slide 4s infinite alternate ease-in-out;
+    animation-delay: 2s;
+
+}
+
+.slider__box ul:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.slider__box li{
+
+    list-style: none;
+    width: 100%;
+
+}
+
+.slider__box img{
+    width: 100%;
+}
+
+
+
+@keyframes slide {
+    49% {margin-left: 0;}
+    50% {margin-left: 0;}
+
+    60% {margin-left: -100%;}
+    100% {margin-left: -100%;}
+}
+
+/* New Collection */
+
+.newCollection {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 20px;
+}
+.newCollection h2 {
+    font-weight: 100;
+    font-size: 30px;
+    color: var(--color-gray);
+    font-weight: bold;
+}
+
+.newCollection .new__collection__products {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100vw;
+    max-width: 1504px;
+    height: 600px;
+    gap: 10px;
+}
+.newCollection .new__collection__products .product {
+    padding: 14px;
+    background-color: var(--color-verylightgray);
+    position: relative;
+    font-size: 13.5px;
+    cursor: pointer;
+}
+
+.newCollection .new__collection__products .product .heart {
+    display: flex;
+    justify-content: end;
+    height: 40px;
+}
+
+.newCollection .new__collection__products .product .heart i {
+    color: var(--color-red);
+    font-size: 35px;
+    margin-right: 20px;
+}    
+.newCollection .new__collection__products .product img {
+    width: 100%;
+}
+.newCollection .new__collection__products .product .category{
+    color: #717171;
+}
+
+.newCollection .new__collection__products .product .description{
+
+    margin-top: 14px;
+    color: var(--color-gray);
+    font-weight: bold;
+    width: 100%;
+}
+
+.newCollection .new__collection__products .product price {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buyNow {
+    width: 90%;
+    height: 40px;
+    background-color: var(--color-pink);
+    display: grid;
+    place-content: center;
+    position: absolute;
+    bottom: 15px;
+}
+
+
+/* Ver terminos y condiciones */
+
+.politica{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+
+}
+
+.politica a{
+
+    color: var(--color-black);
+    font-weight: bold;
+    text-decoration-line: underline;
+
+}
+
+/* Galería de tipos de joyas */
+
+.jewerly__types{
+
+    display: grid;
+    grid-template: 1fr / repeat(6, 1fr);
+    width: 1200px;
+    margin:auto;
+    gap: 20px
+
+}
+
+.jewerly__types img{
+
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+    cursor: pointer
+}
+
+.jewerly img:hover{
+    transform: scale(1.07);
+}
+
+
+.jewerly{
+
+    text-align: center;
+}
+
+.jewerly__types .jewerly a{
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-pink);
+    color: var(--color-black);
+}
