@@ -5,13 +5,14 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
 body{
 
-    width:100vw;
+    width:100%;
+    overflow-x: hidden;
     background-color: var(--color-white);
 }
 
@@ -39,6 +40,7 @@ body{
 /* Header Logo, Search Bar & Icons */
 
 header {
+    z-index: 5;
     position: sticky;
     top: 0;
     background-color: var(--color-white);
@@ -205,7 +207,14 @@ header nav ul li:last-child {
     padding: 0;
     width: 200%;
 
-    animation: slide 6s infinite alternate ease-in-out
+    animation: slide 4s infinite alternate ease-in-out;
+    animation-delay: 2s;
+
+}
+
+.slider__box ul:hover{
+    animation-play-state: paused;
+    cursor: pointer;
 }
 
 .slider__box li{
@@ -219,6 +228,8 @@ header nav ul li:last-child {
     width: 100%;
 }
 
+
+
 @keyframes slide {
     49% {margin-left: 0;}
     50% {margin-left: 0;}
@@ -230,6 +241,7 @@ header nav ul li:last-child {
 /* New Collection */
 
 .newCollection {
+    margin-top: 50px;
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -304,4 +316,57 @@ header nav ul li:last-child {
     place-content: center;
     position: absolute;
     bottom: 15px;
+}
+
+
+/* Ver terminos y condiciones */
+
+.politica{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+
+}
+
+.politica a{
+
+    color: var(--color-black);
+    font-weight: bold;
+    text-decoration-line: underline;
+
+}
+
+/* Galería de tipos de joyas */
+
+.jewerly__types{
+
+    display: grid;
+    grid-template: 1fr / repeat(6, 1fr);
+    width: 1200px;
+    margin:auto;
+    gap: 20px
+
+}
+
+.jewerly__types img{
+
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+    cursor: pointer
+}
+
+.jewerly img:hover{
+    transform: scale(1.07);
+}
+
+
+.jewerly{
+
+    text-align: center;
+}
+
+.jewerly__types .jewerly a{
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-pink);
+    color: var(--color-black);
 }
